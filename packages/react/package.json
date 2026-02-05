@@ -2,6 +2,15 @@
     "name": "@table-plugin/react",
     "version": "0.1.0",
     "description": "React bindings for table-plugin",
+    "author": "KedwithGod",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KedwithGod/ked_table.git",
+        "directory": "packages/react"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",

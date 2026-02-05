@@ -2,6 +2,15 @@
     "name": "@table-plugin/core",
     "version": "0.1.0",
     "description": "Headless table logic for enterprise-grade tables",
+    "author": "KedwithGod",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KedwithGod/ked_table.git",
+        "directory": "packages/core"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",

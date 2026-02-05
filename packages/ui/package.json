@@ -2,6 +2,15 @@
     "name": "@table-plugin/ui",
     "version": "0.1.0",
     "description": "Default UI components for table-plugin",
+    "author": "KedwithGod",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KedwithGod/ked_table.git",
+        "directory": "packages/ui"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
