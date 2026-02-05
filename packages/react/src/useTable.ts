@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
-import { createTable, TableOptions, Table } from '@table-plugin/core'
+import { createTable, TableOptions, Table } from 'ked-table-core'
 
 /**
  * React hook for creating and managing a table instance

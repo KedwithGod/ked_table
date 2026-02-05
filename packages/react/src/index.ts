@@ -12,4 +12,4 @@ export type {
     FooterContext,
     StyleRule,
     ThemeConfig,
-} from '@table-plugin/core'
+} from 'ked-table-core'

@@ -1,4 +1,4 @@
-import { createPlugin, SelectionState } from '@table-plugin/core'
+import { createPlugin, SelectionState } from 'ked-table-core'
 
 export interface SelectionOptions {
     enableMultiRowSelection?: boolean

@@ -1,9 +1,9 @@
 
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { useTable, type Column } from '@table-plugin/react'
-import { usePersistence, useSorting, useVisibility } from '@table-plugin/plugins'
-import { Table } from '@table-plugin/ui'
+import { useTable, type Column } from 'ked-table-react'
+import { usePersistence, useSorting, useVisibility } from 'ked-table-plugins'
+import { Table } from 'ked-table-ui'
 
 const meta: Meta<typeof Table> = {
     title: 'Features/Persistence',

@@ -1,5 +1,5 @@
 
-import { createPlugin } from '@table-plugin/core'
+import { createPlugin } from 'ked-table-core'
 
 /**
  * Export plugin - adds CSV export capabilities

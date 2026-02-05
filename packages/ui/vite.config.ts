@@ -12,7 +12,7 @@ export default defineConfig({
             formats: ['es'],
         },
         rollupOptions: {
-            external: ['react', 'react-dom', '@table-plugin/core'],
+            external: ['react', 'react-dom', 'ked-table-core'],
             output: {
                 assetFileNames: 'style.css',
             },

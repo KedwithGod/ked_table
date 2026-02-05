@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { useTable, type Column } from '@table-plugin/react'
-import { Table } from '@table-plugin/ui'
-import { useResizing } from '@table-plugin/plugins'
+import { useTable, type Column } from 'ked-table-react'
+import { Table } from 'ked-table-ui'
+import { useResizing } from 'ked-table-plugins'
 
 const meta: Meta = {
     title: 'Features/Column Resizing',

@@ -1,5 +1,5 @@
 {
-    "name": "@table-plugin/core",
+    "name": "ked-table-core",
     "version": "0.1.0",
     "description": "Headless table logic for enterprise-grade tables",
     "author": "KedwithGod",

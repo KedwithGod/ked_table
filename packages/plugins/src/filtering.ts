@@ -1,4 +1,4 @@
-import { createPlugin, FilteringState } from '@table-plugin/core'
+import { createPlugin, FilteringState } from 'ked-table-core'
 
 export interface FilteringOptions {
     filterFn?: (row: any, columnId: string, filterValue: any) => boolean

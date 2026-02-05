@@ -1,5 +1,5 @@
 {
-    "name": "@table-plugin/react",
+    "name": "ked-table-react",
     "version": "0.1.0",
     "description": "React bindings for table-plugin",
     "author": "KedwithGod",
@@ -31,7 +31,7 @@
         "clean": "rm -rf dist"
     },
     "dependencies": {
-        "@table-plugin/core": "workspace:*",
+        "ked-table-core": "workspace:*",
         "zustand": "^4.5.0"
     },
     "peerDependencies": {

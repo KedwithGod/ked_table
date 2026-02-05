@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react'
-import '@table-plugin/ui/styles'
+import 'ked-table-ui/styles'
 import './global.css'
 
 const preview: Preview = {

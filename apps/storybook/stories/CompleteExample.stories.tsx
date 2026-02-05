@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { useTable, type Column } from '@table-plugin/react'
-import { Table, Pagination } from '@table-plugin/ui'
-import { useSorting, useFiltering, usePagination } from '@table-plugin/plugins'
+import { useTable, type Column } from 'ked-table-react'
+import { Table, Pagination } from 'ked-table-ui'
+import { useSorting, useFiltering, usePagination } from 'ked-table-plugins'
 
 const meta: Meta = {
     title: 'Features/Complete Example',

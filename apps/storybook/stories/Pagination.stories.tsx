@@ -1,9 +1,9 @@
 
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { useTable, type Column } from '@table-plugin/react'
-import { usePagination } from '@table-plugin/plugins'
-import { Table, Pagination } from '@table-plugin/ui'
+import { useTable, type Column } from 'ked-table-react'
+import { usePagination } from 'ked-table-plugins'
+import { Table, Pagination } from 'ked-table-ui'
 
 const meta: Meta<typeof Table> = {
     title: 'Features/Pagination',

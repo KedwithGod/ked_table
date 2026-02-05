@@ -1,5 +1,5 @@
 {
-    "name": "@table-plugin/ui",
+    "name": "ked-table-ui",
     "version": "0.1.0",
     "description": "Default UI components for table-plugin",
     "author": "KedwithGod",
@@ -32,7 +32,7 @@
         "clean": "rm -rf dist"
     },
     "dependencies": {
-        "@table-plugin/core": "workspace:*"
+        "ked-table-core": "workspace:*"
     },
     "peerDependencies": {
         "react": "^18.0.0"

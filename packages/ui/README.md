@@ -1,19 +1,19 @@
-# @table-plugin/ui
+# ked-table-ui
 
 Ready-to-use, beautiful, and accessible table components for the Table Plugin system.
 
 ## Installation
 
 ```bash
-pnpm add @table-plugin/ui @table-plugin/react @table-plugin/core
+pnpm add ked-table-ui ked-table-react ked-table-core
 ```
 
 ## Usage
 
 ```tsx
-import { useTable } from '@table-plugin/react';
-import { Table } from '@table-plugin/ui';
-import '@table-plugin/ui/styles'; // Import default styles
+import { useTable } from 'ked-table-react';
+import { Table } from 'ked-table-ui';
+import 'ked-table-ui/styles'; // Import default styles
 
 function App() {
   const table = useTable({

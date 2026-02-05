@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table as TableType, resolveCellStyle, resolveRowStyle, resolveCellTextStyle, ThemeConfig } from '@table-plugin/core'
+import { Table as TableType, resolveCellStyle, resolveRowStyle, resolveCellTextStyle, ThemeConfig } from 'ked-table-core'
 import './Table.css'
 
 export interface TableProps<TData = any> {

@@ -1,4 +1,4 @@
-import { createPlugin, SortingState } from '@table-plugin/core'
+import { createPlugin, SortingState } from 'ked-table-core'
 
 export interface SortingOptions {
     multiSort?: boolean

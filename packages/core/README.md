@@ -1,17 +1,17 @@
-# @table-plugin/core
+# ked-table-core
 
 The headless core logic for the Table Plugin system. This package is framework-agnostic and handles the internal state coordination and plugin orchestration.
 
 ## Installation
 
 ```bash
-pnpm add @table-plugin/core
+pnpm add ked-table-core
 ```
 
 ## Usage
 
 ```typescript
-import { createTable } from '@table-plugin/core';
+import { createTable } from 'ked-table-core';
 
 const table = createTable({
   data: [...],

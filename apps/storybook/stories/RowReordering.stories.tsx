@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { useTable, type Column } from '@table-plugin/react'
-import { Table } from '@table-plugin/ui'
-import { useRowReordering } from '@table-plugin/plugins'
+import { useTable, type Column } from 'ked-table-react'
+import { Table } from 'ked-table-ui'
+import { useRowReordering } from 'ked-table-plugins'
 
 const meta: Meta = {
     title: 'Features/Row Reordering',

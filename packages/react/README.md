@@ -1,17 +1,17 @@
-# @table-plugin/react
+# ked-table-react
 
 React hooks and bindings for the Table Plugin system.
 
 ## Installation
 
 ```bash
-pnpm add @table-plugin/react @table-plugin/core
+pnpm add ked-table-react ked-table-core
 ```
 
 ## Usage
 
 ```tsx
-import { useTable } from '@table-plugin/react';
+import { useTable } from 'ked-table-react';
 
 function MyTable() {
   const table = useTable({

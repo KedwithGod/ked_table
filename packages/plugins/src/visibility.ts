@@ -1,5 +1,5 @@
 
-import { createPlugin } from '@table-plugin/core'
+import { createPlugin } from 'ked-table-core'
 
 /**
  * Visibility plugin - enables showing/hiding columns

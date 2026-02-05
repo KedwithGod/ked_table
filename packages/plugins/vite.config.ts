@@ -16,7 +16,7 @@ export default defineConfig({
             formats: ['es'],
         },
         rollupOptions: {
-            external: ['@table-plugin/core'],
+            external: ['ked-table-core'],
         },
         emptyOutDir: false,
     },

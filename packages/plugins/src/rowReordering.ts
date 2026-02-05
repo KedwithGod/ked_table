@@ -1,4 +1,4 @@
-import { createPlugin, TableState } from '@table-plugin/core'
+import { createPlugin, TableState } from 'ked-table-core'
 
 /**
  * Row Reordering plugin - enables manual and DnD row reordering

@@ -1,5 +1,5 @@
 {
-    "name": "@table-plugin/plugins",
+    "name": "ked-table-plugins",
     "version": "0.1.0",
     "description": "Official plugins for table-plugin",
     "author": "KedwithGod",
@@ -71,7 +71,7 @@
         "clean": "rm -rf dist"
     },
     "dependencies": {
-        "@table-plugin/core": "workspace:*"
+        "ked-table-core": "workspace:*"
     },
     "devDependencies": {
         "@types/react": "^18.2.48",

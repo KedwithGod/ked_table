@@ -1,4 +1,4 @@
-import { createPlugin, TableState } from '@table-plugin/core'
+import { createPlugin, TableState } from 'ked-table-core'
 
 export interface ResizingState extends TableState {
     resizing: {

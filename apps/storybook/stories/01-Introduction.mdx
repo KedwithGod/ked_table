@@ -20,17 +20,17 @@ Welcome to the **Enterprise Table Plugin** documentation! This is a powerful, fl
 
 This library is organized as a monorepo with the following packages:
 
-- **@table-plugin/core** - Headless table logic
-- **@table-plugin/react** - React bindings and hooks
-- **@table-plugin/ui** - Default UI components
-- **@table-plugin/plugins** - Official plugins (sorting, filtering, pagination, selection)
+- **ked-table-core** - Headless table logic
+- **ked-table-react** - React bindings and hooks
+- **ked-table-ui** - Default UI components
+- **ked-table-plugins** - Official plugins (sorting, filtering, pagination, selection)
 
 ## 🎯 Quick Start
 
 ```tsx
-import { useTable } from '@table-plugin/react'
-import { Table } from '@table-plugin/ui'
-import { useSorting, useFiltering, usePagination } from '@table-plugin/plugins'
+import { useTable } from 'ked-table-react'
+import { Table } from 'ked-table-ui'
+import { useSorting, useFiltering, usePagination } from 'ked-table-plugins'
 
 function MyTable() {
   const data = [

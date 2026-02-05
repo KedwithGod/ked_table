@@ -1,5 +1,5 @@
 
-import { createPlugin } from '@table-plugin/core'
+import { createPlugin } from 'ked-table-core'
 
 /**
  * Persistence plugin - saves and loads table state from localStorage

@@ -1,4 +1,4 @@
-import { createPlugin, PaginationState } from '@table-plugin/core'
+import { createPlugin, PaginationState } from 'ked-table-core'
 
 export interface PaginationOptions {
     pageSize?: number

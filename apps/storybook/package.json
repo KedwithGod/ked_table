@@ -8,10 +8,10 @@
         "clean": "rm -rf storybook-static"
     },
     "dependencies": {
-        "@table-plugin/core": "workspace:*",
-        "@table-plugin/react": "workspace:*",
-        "@table-plugin/ui": "workspace:*",
-        "@table-plugin/plugins": "workspace:*",
+        "ked-table-core": "workspace:*",
+        "ked-table-react": "workspace:*",
+        "ked-table-ui": "workspace:*",
+        "ked-table-plugins": "workspace:*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

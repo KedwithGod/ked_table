@@ -10,7 +10,7 @@ export default defineConfig({
             formats: ['es'],
         },
         rollupOptions: {
-            external: ['react', '@table-plugin/core', 'zustand'],
+            external: ['react', 'ked-table-core', 'zustand'],
         },
         emptyOutDir: false,
     },

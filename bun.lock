@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@table-plugin/monorepo",
+      "name": "ked-table-monorepo",
       "devDependencies": {
         "@changesets/cli": "^2.27.1",
         "@types/node": "^20.11.5",

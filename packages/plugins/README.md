@@ -1,11 +1,11 @@
-# @table-plugin/plugins
+# ked-table-plugins
 
 The official plugin suite for @table-plugin.
 
 ## Installation
 
 ```bash
-pnpm add @table-plugin/plugins
+pnpm add ked-table-plugins
 ```
 
 ## Available Plugins
@@ -52,7 +52,7 @@ import {
   useSorting, 
   useReordering, 
   useRowReordering 
-} from '@table-plugin/plugins';
+} from 'ked-table-plugins';
 
 const table = useTable({
   data,
