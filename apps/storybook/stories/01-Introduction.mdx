@@ -1,0 +1,83 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Introduction" />
+
+# Enterprise Table Plugin
+
+Welcome to the **Enterprise Table Plugin** documentation! This is a powerful, flexible, and enterprise-ready table plugin for React applications.
+
+## 🚀 Features
+
+- **Headless Architecture** - Complete separation of logic and UI for maximum flexibility
+- **Plugin System** - Extend functionality with composable plugins
+- **Advanced Styling** - Rule-based styling engine with CSS variables
+- **Performance** - Built for large datasets with virtualization support
+- **Accessible** - WCAG compliant with full keyboard navigation
+- **Responsive** - Mobile-friendly layouts out of the box
+- **TypeScript** - Full type safety throughout
+
+## 📦 Packages
+
+This library is organized as a monorepo with the following packages:
+
+- **@table-plugin/core** - Headless table logic
+- **@table-plugin/react** - React bindings and hooks
+- **@table-plugin/ui** - Default UI components
+- **@table-plugin/plugins** - Official plugins (sorting, filtering, pagination, selection)
+
+## 🎯 Quick Start
+
+```tsx
+import { useTable } from '@table-plugin/react'
+import { Table } from '@table-plugin/ui'
+import { useSorting, useFiltering, usePagination } from '@table-plugin/plugins'
+
+function MyTable() {
+  const data = [
+    { id: 1, name: 'John Doe', email: 'john@example.com', status: 'active' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', status: 'inactive' },
+  ]
+
+  const columns = [
+    { id: 'id', accessorKey: 'id', header: 'ID' },
+    { id: 'name', accessorKey: 'name', header: 'Name' },
+    { id: 'email', accessorKey: 'email', header: 'Email' },
+    { id: 'status', accessorKey: 'status', header: 'Status' },
+  ]
+
+  const table = useTable({
+    data,
+    columns,
+    plugins: [useSorting(), useFiltering(), usePagination()],
+  })
+
+  return <Table table={table} />
+}
+```
+
+## 🎨 Philosophy
+
+This library follows a **headless-first** approach, meaning:
+
+1. **Logic ≠ UI** - The core logic is completely separate from the UI
+2. **Composable** - Build exactly what you need with plugins
+3. **Opt-in** - Every feature is optional
+4. **Framework-friendly** - Works with any React setup
+
+## 📚 Navigation
+
+Explore the documentation:
+
+- **Core** - Learn about basic table setup and column definitions
+- **Features** - Discover sorting, filtering, pagination, and selection
+- **Styling** - Master theming and conditional styling
+- **Advanced** - Dive into server-side data, nested rows, and more
+
+## 🤝 Contributing
+
+We welcome contributions! This is an open-source project under the MIT license.
+
+## 📄 License
+
+- **Community Edition**: MIT License
+- **Enterprise Edition**: Commercial License (contact for details)

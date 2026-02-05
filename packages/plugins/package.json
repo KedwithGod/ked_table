@@ -1,0 +1,73 @@
+{
+    "name": "@table-plugin/plugins",
+    "version": "0.1.0",
+    "description": "Official plugins for table-plugin",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./sorting": {
+            "import": "./dist/sorting.js",
+            "types": "./dist/sorting.d.ts"
+        },
+        "./filtering": {
+            "import": "./dist/filtering.js",
+            "types": "./dist/filtering.d.ts"
+        },
+        "./pagination": {
+            "import": "./dist/pagination.js",
+            "types": "./dist/pagination.d.ts"
+        },
+        "./selection": {
+            "import": "./dist/selection.js",
+            "types": "./dist/selection.d.ts"
+        },
+        "./reordering": {
+            "import": "./dist/reordering.js",
+            "types": "./dist/reordering.d.ts"
+        },
+        "./rowReordering": {
+            "import": "./dist/rowReordering.js",
+            "types": "./dist/rowReordering.d.ts"
+        },
+        "./expansion": {
+            "import": "./dist/expansion.js",
+            "types": "./dist/expansion.d.ts"
+        },
+        "./visibility": {
+            "import": "./dist/visibility.js",
+            "types": "./dist/visibility.d.ts"
+        },
+        "./persistence": {
+            "import": "./dist/persistence.js",
+            "types": "./dist/persistence.d.ts"
+        },
+        "./export": {
+            "import": "./dist/export.js",
+            "types": "./dist/export.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite build --watch --mode development",
+        "build": "tsc && vite build",
+        "test": "vitest",
+        "clean": "rm -rf dist"
+    },
+    "dependencies": {
+        "@table-plugin/core": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.48",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.11",
+        "vitest": "^1.2.0"
+    }
+}

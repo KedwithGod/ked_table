@@ -1,0 +1,377 @@
+/* CSS Variables for theming */
+:root {
+  --table-bg: #ffffff;
+  --table-text: #1a1a1a;
+  --header-bg: #f8fafc;
+  --header-text: #1a1a1a;
+  --row-hover-bg: #f8fafc;
+  --divider-color: #e5e7eb;
+  --cell-padding: 12px 16px;
+  --cell-padding-mobile: 8px 12px;
+  --border-radius: 8px;
+  --primary-color: #2563eb;
+}
+
+/* Dark mode support */
+[data-theme='dark'] {
+  --table-bg: #1a1a1a;
+  --table-text: #f8fafc;
+  --header-bg: #2d2d2d;
+  --header-text: #f8fafc;
+  --row-hover-bg: #2d2d2d;
+  --divider-color: #404040;
+}
+
+/* Container */
+.table-container {
+  width: 100%;
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--table-bg);
+}
+
+.table-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(2px);
+}
+
+.table-spinner {
+  font-weight: 600;
+  color: var(--primary-color, #2563eb);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--table-bg);
+  color: var(--table-text);
+  font-size: var(--font-size, 14px);
+  line-height: 1.5;
+}
+
+tfoot {
+  font-weight: 600;
+  background: var(--header-bg);
+}
+
+tfoot td {
+  padding: var(--cell-padding);
+  border-top: 2px solid var(--divider-color);
+}
+
+/* Header */
+.table thead {
+  background: var(--header-bg);
+  color: var(--header-text);
+  font-weight: 600;
+}
+
+.table thead.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  padding: var(--cell-padding);
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sort-indicator {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* Body */
+.table td {
+  padding: var(--cell-padding);
+  text-align: left;
+}
+
+/* Dividers */
+.table tr.with-divider {
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.table td.with-divider:not(:last-child),
+.table th.with-divider:not(:last-child) {
+  border-right: 1px solid var(--divider-color);
+}
+
+/* Hover effect */
+.table tbody tr:hover {
+  background: var(--row-hover-bg);
+  transition: background 0.15s ease;
+}
+
+.table tr.selected-row {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.table tr.selected-row:hover {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+/* Empty state */
+.table-empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.table-empty-state p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .table th,
+  .table td {
+    padding: var(--cell-padding-mobile);
+    font-size: 13px;
+  }
+}
+
+/* Scrollable container */
+.table-container[style*='overflow'] {
+  border: 1px solid var(--divider-color);
+}
+
+.table-bordered {
+  border: 1px solid var(--divider-color);
+}
+
+/* Pinned Columns */
+.sticky-left,
+.sticky-right {
+  position: sticky;
+  z-index: 2;
+  background: var(--table-bg);
+}
+
+.sticky-left {
+  left: 0;
+}
+
+.sticky-right {
+  right: 0;
+}
+
+/* Add shadow to pinned columns when scrolling */
+.sticky-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  bottom: 0;
+  width: 5px;
+  pointer-events: none;
+  box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sticky-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  bottom: 0;
+  width: 5px;
+  pointer-events: none;
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.table-container.scrolling-left .sticky-left::after,
+.table-container.scrolling-right .sticky-right::before {
+  opacity: 1;
+}
+
+
+/* Layout Modes */
+.layout-card {
+  display: block;
+}
+
+.layout-card thead {
+  display: none;
+}
+
+.layout-card tbody,
+.layout-card tr,
+.layout-card td {
+  display: block;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.layout-card tr {
+  margin-bottom: 16px;
+  background: var(--table-bg);
+  border: 1px solid var(--divider-color);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.layout-card td {
+  padding: 8px 12px;
+  border: none !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout-card .cell-label {
+  display: block;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.table:not(.layout-card) .cell-label {
+  display: none;
+}
+
+/* Column Resizer */
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.table th:hover .resizer,
+.resizer:hover {
+  opacity: 1;
+}
+
+.resizer:active {
+  background: var(--primary-color, #3b82f6);
+  opacity: 1;
+}
+
+/* Reordering */
+.reorder-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 4px;
+}
+
+.reorder-arrow {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.reorder-arrow:hover {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
+
+.drag-handle {
+  cursor: grab;
+  color: #cbd5e1;
+  font-size: 14px;
+  padding: 0 2px;
+  user-select: none;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.table th.drag-over {
+  background: rgba(37, 99, 235, 0.05);
+  box-shadow: inset 0 0 0 2px var(--primary-color);
+}
+
+.th-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Row Reordering */
+.table tr.row-drag-over {
+  border-top: 2px solid var(--primary-color) !important;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.table tr.row-being-dragged {
+  opacity: 0.5;
+  background: #f1f5f9;
+}
+
+.is-row-dragging .table tbody tr:hover {
+  background: transparent !important;
+}
+
+.row-reorder-cell {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.row-reorder-arrow {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.row-reorder-arrow:hover {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
